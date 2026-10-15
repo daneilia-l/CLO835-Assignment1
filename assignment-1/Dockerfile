@@ -8,9 +8,9 @@ FROM ubuntu:26.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -y \
- && apt-get install -y --no-install-recommends \
-      python3 python3-venv mysql-client ca-certificates \
- && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends \
+        python3 python3-venv mysql-client ca-certificates iputils-ping \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
